@@ -20,21 +20,17 @@ body {
   color: var(--font-color);
 }
 
-/* header */
-#header {
-  min-height: 100vh;
-}
-
 /* nav */
 #nav-bar {
   background-color: var(--basic-color);
   display: flex;
   justify-content: space-between;
-  padding: 5px 15px;
+  padding: 7px 15px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 
 .navigation-link {
@@ -65,9 +61,15 @@ body {
   height: 40px;
 }
 
-/* main */
-#main {
-  height: 1000px;
+/* main header */
+#main-header {
+  margin-top: 50px;
+  position: relative;
+}
+
+#header-img {
+  display: block;
+  width: 100%;
 }
 
 /* responsive breakpoint */
@@ -76,7 +78,6 @@ body {
   .navigation-link {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     right: 0;
