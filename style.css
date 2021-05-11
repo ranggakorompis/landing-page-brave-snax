@@ -4,4 +4,139 @@
   --basic-color: #f8fa8d;
   --font-color: #112e44;
   --blue-color: #00b3fd;
+  /* font */
+  --basic-font: "Almarai", sans-serif;
+}
+
+/* basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--basic-font);
+  color: var(--font-color);
+}
+
+/* header */
+#header {
+  min-height: 100vh;
+}
+
+/* nav */
+#nav-bar {
+  background-color: var(--basic-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navigation-link {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-link li {
+  margin: 0 10px;
+}
+
+.navigation-link li:nth-child(4) {
+  padding: 3px;
+  border-radius: 5px;
+  background: var(--blue-color);
+}
+
+.nav-link {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* main */
+#main {
+  height: 1000px;
+}
+
+/* responsive breakpoint */
+@media screen and (max-width: 767px) {
+  /* nav */
+  .navigation-link {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--basic-color);
+    transform: translateX(100%);
+    transition: 1s;
+  }
+
+  .navigation-link li {
+    margin: 5px 0;
+  }
+
+  .slide {
+    transform: translateX(0%);
+  }
+
+  .humburger-menu {
+    margin: auto 0;
+    width: 35px;
+    height: 35px;
+    position: relative;
+  }
+
+  .humburger-menu input {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+  }
+
+  .humburger-menu span {
+    margin-bottom: 6px;
+    display: block;
+    height: 7px;
+    background-color: var(--font-color);
+    transition: 1s;
+  }
+
+  /* humburger menu animation */
+  .humburger-menu input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(9.5px, 9.5px) scale(1.2, 1);
+  }
+
+  .humburger-menu input:checked ~ span:nth-child(3) {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+
+  .humburger-menu input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(9px, -9px) scale(1.2, 1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* nav */
+  .humburger-menu {
+    display: none;
+  }
 }
