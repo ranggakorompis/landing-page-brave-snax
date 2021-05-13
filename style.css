@@ -20,8 +20,24 @@ body {
   color: var(--font-color);
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--font-color);
+}
+
 a:visited {
-  text-decoration-color: none;
+  color: var(--font-color);
+}
+
+a:hover {
+  color: salmon;
+}
+
+a:active {
+  color: var(--font-color);
 }
 
 /* nav */
@@ -193,6 +209,10 @@ a:visited {
   background-color: var(--font-color);
   margin: 0 15px;
   border-radius: 50%;
+}
+
+#medsos li:hover {
+  background-color: var(--blue-color);
 }
 
 #medsos i {
