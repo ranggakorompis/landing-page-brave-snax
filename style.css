@@ -134,13 +134,24 @@ a:active {
   float: left;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  /* border-left: 5px solid var(--blue-color); */
   margin-right: 5px;
 }
 
 .content p {
   line-height: 1.5;
   font-size: 18px;
+}
+
+/* testimoni */
+#video-box {
+  padding: 3px;
+}
+
+#video {
+  width: 100%;
+  height: 300px;
+  /* border: 1px solid var(--font-color); */
+  /* border-radius: 10px; */
 }
 
 /* order menu */
@@ -161,6 +172,13 @@ a:active {
 
 .card:nth-child(2) .variant-img {
   background-image: url(img/balado.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card:nth-child(3) .variant-img {
+  background-image: url(img/gula-aren.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -263,11 +281,16 @@ a:active {
 #submit {
   background-color: var(--blue-color);
   font-weight: 700;
+  /* margin-bottom: 50px; */
 }
 
 /* footer */
 #footer {
-  height: 60px;
+  max-width: 550px;
+  /* height: 60px; */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--basic-color);
 }
 
 /* responsive breakpoint */
