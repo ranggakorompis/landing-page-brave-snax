@@ -270,7 +270,7 @@ a:active {
 }
 
 #email {
-  background-color: #c4c4c4;
+  background-color: rgb(197, 197, 197);
   padding-left: 10px;
 }
 
@@ -369,6 +369,7 @@ a:active {
   }
 
   #header-img {
+    position: relative;
     width: 100%;
     opacity: 0.5;
   }
